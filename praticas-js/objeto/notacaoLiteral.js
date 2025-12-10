@@ -17,6 +17,10 @@ console.log(obj3)
 const obj4 = { [nomeAttr]: valorAttr } // forma simplificada (ES6)
 console.log(obj4)
 
+//- A forma tradicional exige criar o objeto e depois atribuir a propriedade.
+//- Com ES6, você pode usar colchetes diretamente na definição para criar chaves dinâmicas.
+
+
 const obj5 = {
     funcao1: function() {
         // forma tradicional

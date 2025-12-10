@@ -1,6 +1,6 @@
 // usando a notação literal
-const obj1 = {}
-console.log(obj1)
+// const obj1 = {a}
+// console.log(obj1)
 
 // Object em JS
 const obj2 = new Object
@@ -8,7 +8,7 @@ console.log(obj2)
 
 // Funções construtoras
 function Produto(nome, preco, desc) {
-    this.nome = nome // atributo público
+    this.nome = nome // this.nome torna nome uma propriedade pública.
     this.getPrecoComDesconto = () => {
         return preco * (1 - desc)
     }
@@ -36,5 +36,8 @@ const f2 = criarFuncionario('Maria', 11400, 1)
 console.log(f1.getSalario())
 console.log(f2.getSalario())
 
-// conclusão: objetos em JS são dinâmicos, podem ser criados de várias formas, e funções podem ser usadas para criar objetos com atributos e métodos encapsulados.
-// escolha da abordagem depende do contexto e necessidade do projeto.
+// conclusão: 
+// - Notação literal ({}): Simples e direta, ideal para objetos estáticos ou pequenos.
+// - Construtor new Object(): Funcional, mas pouco usado hoje em dia por ser mais verboso.
+// - Função construtora (function Produto): Permite criar múltiplas instâncias com encapsulamento parcial (propriedades públicas e privadas).
+// - Função factory (criarFuncionario): Mais flexível e legível, ideal para encapsular lógica e evitar o uso de this.
